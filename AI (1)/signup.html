@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="font/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap-3.3.5-dist/css/bootstrap.min.css" >
+    <link rel="stylesheet" type="text/css" href='signup.css'>
+</head>
+<body>
+    
+    
+        
+  <nav class="navbar navbar-default">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="welcome.html">Limon</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+         <li class="active"><a href='welcome.html'>Home</a></li>
+         <li><a href="">Statistics</a></li>
+         <li><a href="">About</a></li>
+         <li><a href="">Contact <i class="fas fa-ambulance"></i></a></li>
+         
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href='signup.html'>Sign Up <i class="fa fa-user-plus" ></i></a></li>
+          <li><a href='login.html'>Login <i class="fa fa-user" ></i></a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+    
+      <h3>Sign Up Page</h3>
+     <div  id="container" class="container">
+       
+      <div class="col-sm-12">
+                
+      <div id="login" class="col-sm-6">
+     
+      <form class="form-horizontal">
+      <div class="form-group">
+      <div class="col-sm-10">
+      <input type="text" class="form-control" id="inputFullname" placeholder="Full Name">
+      </div>
+      </div>
+      <div class="form-group">
+      <div class="col-sm-10">
+      <input type="text" class="form-control" id="inputUsername" placeholder="Username">
+      </div>
+      </div>
+      <div class="form-group">
+      <div class="col-sm-10">
+      <input type="text" class="form-control" id="inputContact" placeholder="Contact">
+      </div>
+      </div>
+      <div class="form-group">   
+      <div class="col-sm-10">
+      <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+      </div>
+      </div>
+      
+       <div class="form-group">
+       <div class="col-sm-10">
+           
+        <fieldset>
+        <input type="password" class="form-control" placeholder="Password" id="password" required>
+        <p></p>
+        <input type="password" class="form-control" placeholder="Confirm Password" id="confirm_password" required>
+        <p></p>
+        <button type="submit" class="btn btn-success">Confirm</button>
+        </fieldset>
+           </div>
+            </div>
+      <div class="form-group">   
+      <div class="col-sm-10">
+      <input type="text" class="form-control" id="EmergenContact" placeholder="Emergency contact">
+      </div>
+      </div>
+      <div class="form-group">   
+      <div class="col-sm-10">
+      <input type="text" class="form-control" id="Address" placeholder="Address">
+      </div>
+      </div>
+        <div class="form-group">
+           <div class="col-sm-10">
+           <button id="button" type="button" class="btn btn-success  btn-block">SignUp</button>       
+          
+          </div>  
+          </div>
+    
+      </form>
+          </div>
+          </div>
+      </div>
+    
+
+    
+    
+  <script>
+      var password = document.getElementById("password")
+  , confirm_password = document.getElementById("confirm_password");
+
+function validatePassword(){
+  if(password.value != confirm_password.value) {
+    confirm_password.setCustomValidity("Passwords Don't Match");
+  } else {
+    confirm_password.setCustomValidity('');
+  }
+}
+
+password.onchange = validatePassword;
+confirm_password.onkeyup = validatePassword;
+
+  </script>
+    
+  <script type="text/javascript" src="bootstrap-3.3.5-dist/jquery-2.1.4.min.js"></script>   
+  <script type="text/javascript" src="bootstrap-3.3.5-dist/js/bootstrap.min.js"> </script>
+    
+</body>
+
+</html>
